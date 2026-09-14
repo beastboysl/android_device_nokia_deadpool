@@ -33,6 +33,7 @@ TARGET_SCREEN_HEIGHT := 1520
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := boot system vendor
 BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_RECOVERY_FSTAB := device/nokia/deadpool/recovery.fstab
