@@ -22,7 +22,6 @@ BOARD_KERNEL_IMAGE_NAME := kernel
 TARGET_PREBUILT_KERNEL := device/nokia/deadpool/prebuilt/kernel
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_PREBUILT_DTB := device/nokia/deadpool/prebuilt/dtb
 
 BOARD_BOOT_HEADER_VERSION := 1
