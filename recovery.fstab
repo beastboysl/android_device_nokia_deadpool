@@ -1,9 +1,6 @@
-# mount point   fstype  device                                  flags
-/system         ext4    /dev/block/bootdevice/by-name/system    flags=slotselect;display="System"
-/vendor         ext4    /dev/block/bootdevice/by-name/vendor    flags=slotselect;display="Vendor"
-/data           ext4    /dev/block/bootdevice/by-name/userdata  flags=fileencryption=ice;length=-16384
-/boot           emmc    /dev/block/bootdevice/by-name/boot      flags=slotselect
-/misc           emmc    /dev/block/bootdevice/by-name/misc
-
-/external_sd    vfat    /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="MicroSD";storage;wipeingui;removable
-/usb_otg        vfat    /dev/block/sda1      /dev/block/sda     flags=display="USB-OTG";storage;wipeingui;removable
+/           ext4     /dev/block/bootdevice/by-name/system       flags=display=;slotselect
+/vendor     ext4     /dev/block/bootdevice/by-name/vendor       flags=display=vendor;slotselect
+/data       ext4     /dev/block/bootdevice/by-name/userdata     flags=display=data
+/sdcard     vfat     /dev/block/mmcblk1p1                       flags=display=sdcard
+/boot       emmc     /dev/block/bootdevice/by-name/boot         flags=display=boot
+/misc       emmc     /dev/block/bootdevice/by-name/misc         flags=display=misc
