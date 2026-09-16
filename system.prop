@@ -1,0 +1,3 @@
+# USB Controller
+sys.usb.controller=msm_hsusb
+ro.boot.usbcontroller=msm_hsusb
