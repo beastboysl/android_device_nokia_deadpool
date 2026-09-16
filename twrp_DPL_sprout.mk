@@ -27,3 +27,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="Deadpool_00WW-user 11 RKQ1.200928.002 00WW_3_140 release-keys"
 
 BUILD_FINGERPRINT := Nokia/Deadpool_00WW/DPL_sprout:11/RKQ1.200928.002/00WW_3_140:user/release-keys
+
+# for FBE decryption 
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
+# for tzdata
+PRODUCT_PACKAGES += \
+    tzdata_twrp
