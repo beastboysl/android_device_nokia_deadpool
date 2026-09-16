@@ -101,6 +101,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_MTP := true
 
+TARGET_USES_LOGD := true
 TW_INCLUDE_LOGCAT := true
 
 # build flags
