@@ -47,6 +47,7 @@ on property:ro.crypto.ready=0
 on property:vendor.sys.listeners.registered=true
     start hwservicemanager
     start servicemanager
+    start keystore
 
 service hwservicemanager /system/bin/hwservicemanager
     user root
