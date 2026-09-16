@@ -27,6 +27,8 @@
 import /init.recovery.qcom_decrypt.rc
 
 on init
+    mkdir /tmp/misc 0777 root root
+    mkdir /tmp/misc/keystore 0777 root root
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
 
