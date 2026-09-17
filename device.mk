@@ -21,8 +21,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service.recovery
 
 PRODUCT_PACKAGES += \
-    bootctrl.msm8937 \
-    bootctrl.msm8937.recovery \
     libgptutils \
     libgptutils.recovery \
     libz \
