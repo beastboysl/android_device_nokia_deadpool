@@ -1,19 +1,19 @@
-# Core Partitions
-/boot            emmc      /dev/block/bootdevice/by-name/boot         flags=display="Boot";backup=1;flashimg=1;slotselect
-/system          ext4      /dev/block/bootdevice/by-name/system       flags=display="System";backup=0;wipeingui;slotselect
-/system_image    emmc      /dev/block/bootdevice/by-name/system       flags=display="System Image";backup=1;flashimg=1;slotselect
-/vendor          ext4      /dev/block/bootdevice/by-name/vendor       flags=display="Vendor";backup=0;wipeingui;slotselect
-/vendor_image    emmc      /dev/block/bootdevice/by-name/vendor       flags=display="Vendor Image";backup=1;flashimg=1;slotselect
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-# Encryption / Qualcomm Baseband
-/firmware        vfat      /dev/block/bootdevice/by-name/modem        flags=display="Firmware";fsflags=ro;mounttodecrypt;slotselect
-/persist         ext4      /dev/block/bootdevice/by-name/persist      flags=display="Persist";fsflags=ro;mounttodecrypt
-/modem           emmc      /dev/block/bootdevice/by-name/modem        flags=display="Modem Image";backup=1;slotselect
+#TODO: Add 'check' as fs_mgr_flags with data partition.
+# Currently we dont have e2fsck compiled. So fs check would failed.
 
-# User Data (FBE Enabled)
-/data            ext4      /dev/block/bootdevice/by-name/userdata     flags=display="Data";fileencryption=ice;wipeingui
-/misc            emmc      /dev/block/bootdevice/by-name/misc         flags=display="Misc";backup=1
-
-# External Storage
-/external_sd     auto      /dev/block/mmcblk1p1                       flags=display="MicroSD";storage;wipeingui;removable
-/usb-otg         auto      /dev/block/sda1                            flags=display="USB OTG";storage;wipeingui;removable
+#<src>                                      <mnt_point>        <type>  <mnt_flags and options>                     <fs_mgr_flags>
+/dev/block/bootdevice/by-name/system         /                  ext4    ro,barrier=1,discard                        wait,slotselect,avb
+/dev/block/bootdevice/by-name/userdata       /data              ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc,discard  wait,fileencryption=ice,check,quota,reservedsize=128M
+/devices/soc/7864900.sdhci/mmc_host*         /storage/sdcard1   vfat    nosuid,nodev                                wait,voldmanaged=sdcard1:auto,noemulatedsd,encryptable=footer
+/devices/platform/soc/7864900.sdhci/mmc_host*         /storage/sdcard1   vfat    nosuid,nodev                                wait,voldmanaged=sdcard1:auto,noemulatedsd,encryptable=footer
+/dev/block/bootdevice/by-name/config         /frp               emmc    defaults                                    defaults
+/devices/soc/78db000.usb/msm_hsusb_host*     /storage/usbotg    vfat    nosuid,nodev                                wait,voldmanaged=usbotg:auto
+/devices/platform/soc/78db000.usb/msm_hsusb_host*     /storage/usbotg    vfat    nosuid,nodev                                wait,voldmanaged=usbotg:auto
+/dev/block/bootdevice/by-name/misc           /misc              emmc    defaults                                    defaults
+/dev/block/bootdevice/by-name/dsp            /vendor/dsp        ext4    ro,nosuid,nodev,barrier=1                   wait,slotselect
+/dev/block/bootdevice/by-name/modem          /vendor/firmware_mnt vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait,slotselect
+/dev/block/bootdevice/by-name/persist        /mnt/vendor/persist   ext4   noatime,nosuid,nodev,barrier=1                   wait
