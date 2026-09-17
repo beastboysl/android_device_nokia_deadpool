@@ -32,3 +32,8 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/system/lib64/hw/bootctrl.msm8937.so:recovery/root/system/lib64/hw/bootctrl.msm8937.so \
+    $(LOCAL_PATH)/recovery/root/system/lib64/librecovery_updater_msm.so:recovery/root/system/lib64/librecovery_updater_msm.so \
+    $(LOCAL_PATH)/recovery/root/system/lib64/libion.so:recovery/root/system/lib64/libion.so
