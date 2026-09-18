@@ -7,7 +7,7 @@
 - Use at your own risk
 
 ## About Device
-![Nokia 3.2](https://images.ctfassets.net/wcfotm6rrl7u/2LMeyD57pulNYrIbbXUNBZ/d9b81e6685067e58e0b011bdb7f7814e/nokia-3_2-black-front_back-int.png)
+![Nokia 3.2](https://github.com/user-attachments/assets/191cc652-ea31-48b2-93f2-fbce8b0d49c5)
 ================================================================
 Component   | Specs
 -------:|:-------------------------
