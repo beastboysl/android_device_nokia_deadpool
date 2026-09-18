@@ -65,7 +65,7 @@
 | `MAKEFILE_NAME`      | Makefile name                                     | twrp_DPL_sprout                                              |
 | `BUILD_TARGET`       | Build Target Partition (boot/recovery/vendorboot) | boot                                                         |
 
-Pre-built image can be found on: [Release](https://github.com/beastboysl/Action-TWRP-Builder/releases)
+or a pre-built image also can be found on: [here](https://github.com/beastboysl/Action-TWRP-Builder/releases)
 
 -----
 
