@@ -12,8 +12,6 @@
 
 ![Nokia 3.2](https://github.com/user-attachments/assets/191cc652-ea31-48b2-93f2-fbce8b0d49c5)
 
-</div>
-
 |Component   | Specs|
 |-------:|:-------------------------|
 |Chipset| Qualcomm Snapdragon 429 (SDM429)|
@@ -32,6 +30,10 @@
 |USB | microUSB 2.0, OTG|
 |Release Date | 22 May 2019|
 
+</div>
+
+---
+
 ### Status
 - [x] Recovery-in-Boot
 - [x] A/B Partition Support
@@ -42,7 +44,7 @@
 - [ ] USB OTG (Not Tested)
 - [ ] Clean up (Contains some unwanted stuff)
 
------------------------------------------------------------------
+---
 
 ## How to Build
 1. Follow instructions on [Action-TWRP-Builder](https://github.com/azwhikaru/Action-TWRP-Builder)
