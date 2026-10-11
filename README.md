@@ -37,12 +37,12 @@
 ### Status
 - [x] Recovery-in-Boot
 - [x] A/B Partition Support
-- [x] Recovery-in-Boot
+- [x] Backup/Restore
 - [x] MTP
 - [x] ADB | ADB Sideload
-- [ ] SD Card (Not Tested)
+- [x] SD Card
 - [ ] USB OTG (Not Tested)
-- [ ] Clean up (Contains some unwanted stuff)
+- [ ] Clean up (May contains some unwanted stuff)
 
 ---
 
